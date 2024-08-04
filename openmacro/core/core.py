@@ -73,8 +73,6 @@ class Openmacro:
         mode = mode.lower()
         if self.verbose:
             print('Determined conversation type:', mode)
-        print()
-        print(mode)
     
         if mode == "chat":
             self.run_chat(message, display)
