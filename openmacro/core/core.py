@@ -1,5 +1,5 @@
-from .utils.computer import Computer
-from .utils.llm import LLM, to_lmc
+from openmacro.core.utils.computer import Computer
+from openmacro.core.utils.llm import LLM, to_lmc
 from pathlib import Path
 import importlib
 import os

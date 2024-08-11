@@ -1,0 +1,3 @@
+include openmacro/core/config.default.toml
+recursive-include openmacro/core/prompts *
+recursive-include openmacro/extensions *

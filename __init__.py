@@ -1,8 +1,4 @@
-from openmacro.core.core import Openmacro
-
-macro = Openmacro()
-computer = macro.computer
-    
+from openmacro import Openmacro, macro, computer
 
 #   ____  ____  ___  ____  ____ ___  ____ _______________ 
 #  / __ \/ __ \/ _ \/ __ \/ __ `__ \/ __ `/ ___/ ___/ __ \
