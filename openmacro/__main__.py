@@ -1,1 +1,3 @@
-from cli import main 
+from openmacro.cli import main
+
+main()

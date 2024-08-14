@@ -2,8 +2,8 @@ from setuptools import setup, find_packages
 
 setup(
     name='openmacro',
-    version='0.0.1',
-    packages=find_packages(include=['openmacro', 'openmacro.core', 'openmacro.core.utils']),
+    version='0.0.4',
+    packages=find_packages(include=['openmacro', 'openmacro.core', 'openmacro.cli', 'openmacro.core.utils']),
     install_requires=["gradio_client", "toml", "rich"],
     entry_points={
         'console_scripts': [
