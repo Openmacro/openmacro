@@ -3,6 +3,11 @@
     <img src="https://raw.githubusercontent.com/Openmacro/openmacro/46bb3481766cb66983cb191db731c41f5f69d18d/docs/images/openmacro-title.svg" width="480" height="auto" alt="Openmacro"/>
   </a>
 </div>
+<div align="center">
+<a href="LICENSE"><img src="https://img.shields.io/static/v1?label=license&message=MIT&color=white&style=flat" alt="License"/></a>
+  <a href="LICENSE"><img src="https://img.shields.io/github/commit-activity/m/Openmacro/openmacro" alt="License"/></a>
+  <a href="LICENSE"><img src="https://img.shields.io/github/last-commit/Openmacro/openmacro" alt="License"/></a>
+</div>
 
 ##
 
@@ -63,6 +68,7 @@ personality="You have a kind, deterministic and professional attitude towards yo
 - [ ] Chunk Streaming and Smart Stalling 
 - [ ] Semantic File Search
 - [ ] App Interface
+
 ...
 
 ### Contact
