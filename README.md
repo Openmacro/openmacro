@@ -1,33 +1,56 @@
-# openmacro
+<div align="center">
+  <a href="https://hono.dev">
+    <img src="https://raw.githubusercontent.com/honojs/hono/main/docs/images/openmacro-title.svg" width="500" height="auto" alt="Hono"/>
+  </a>
+</div>
+##
 > [!NOTE]  
 > Project is in its early stage of development.
 
-openmacro is a multiplatform personal agent which allows LLMs to run code locally. Open Macro aims to act as a personal agent capable of completing and automating simple to complex tasks autonomously via self prompting.
+openmacro is a multimodal personal agent that allows LLMs to run code locally. openmacro aims to act as a personal agent capable of completing and automating simple to complex tasks autonomously via self prompting.
 
 ### Get started
 You can get started with openmacro by running.
 ```shell
 pip install openmacro
-```
-> Not working? Raise an issue [here](https://github.com/amooo-ooo/openmacro/issues/new).
-```shell
 macro
 ```
+> Not working? Raise an issue [here](https://github.com/amooo-ooo/openmacro/issues/new) or try this out instead:
+```shell
+py -m pip install openmacro
+py -m openmacro
+```
 
-This provides a cli natural-language interface and toolset for you to:
+This provides a cli natural-language interface for you to:
 
 + Complete and automate simple to complex tasks.
 + Analyse and plot data.
-+ ~~Control a Chromium browser to perform tasks and research.~~
 + Control desktop applications through vision and pyautogui.
 + Manipulate files including photos, videos, PDFs, etc.
 
-By default, if no api keys for models are provided, the following will be used powered by HuggingFace:
-+ LLM: [Llama3.1-70B](https://huggingface.co/spaces/orionai/llama-3.1-70b-demo)
-+ Code: [CodeQwen1.5-7B](https://huggingface.co/spaces/Qwen/CodeQwen1.5-7b-Chat-demo)
-+ Vision: [Qwen-VL-Max](https://huggingface.co/spaces/Qwen/Qwen-VL-Max)
+At the moment, API keys for models are yet to be supported and by default, models are powered by HuggingFace Spaces and their respective hosts:
++ LLM: [Llama3.1-405B-Instruct](https://huggingface.co/spaces/Corvius/LLaMA-3.1-405B-Instruct) hosted by [Corvius](https://huggingface.co/Corvius).
++ Code: [CodeQwen1.5-7B](https://huggingface.co/spaces/Qwen/CodeQwen1.5-7b-Chat-demo) hosted by [Qwen](https://huggingface.co/Qwen).
++ Vision: [Qwen-VL-Max](https://huggingface.co/spaces/Qwen/Qwen-VL-Max) hosted by [Qwen](https://huggingface.co/Qwen).
 
 This project is heavily inspired by Open Interpreter. 
+
+### Personalisation
+Openmacro supports cli args and customised settings! You can view arg options by running:
+```shell
+macro --help
+```
+To append your own personalised settings and save it for the future, run:
+```shell
+macro --config "path\to\config.toml" --save
+```
+
+What your personlised `config.toml` might look like:
+```toml
+[assistant]
+name="Basil"
+personality="You have a kind, deterministic and professional attitude towards your work and respond in a formal, yet casual manner."
+```
 
 ### Todo's 
 - [x] AI Intepreter
@@ -35,7 +58,6 @@ This project is heavily inspired by Open Interpreter.
 - [ ] API Keys Support
 - [ ] Extensions Feature
 - [ ] Web Search Capability
-- [ ] Full Browser Control
 - [ ] Chunk Streaming and Smart Stalling 
 - [ ] Semantic File Search
 - [ ] App Interface
