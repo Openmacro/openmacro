@@ -1,9 +1,11 @@
 <div align="center">
   <a href="https://hono.dev">
-    <img src="https://raw.githubusercontent.com/honojs/hono/main/docs/images/openmacro-title.svg" width="500" height="auto" alt="Hono"/>
+    <img src="https://raw.githubusercontent.com/Openmacro/openmacro/46bb3481766cb66983cb191db731c41f5f69d18d/docs/images/openmacro-title.svg" width="500" height="auto" alt="Openmacro"/>
   </a>
 </div>
+
 ##
+
 > [!NOTE]  
 > Project is in its early stage of development.
 
