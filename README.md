@@ -52,7 +52,7 @@ To append your own personalised settings and save it for the future, run:
 macro --config "path\to\config.toml" --save
 ```
 
-What your personlised `config.toml` might look like:
+What your personalised `config.toml` might look like:
 ```toml
 [assistant]
 name="Basil"
