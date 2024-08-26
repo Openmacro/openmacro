@@ -17,7 +17,7 @@
   </a>
 </div>
 
-
+<br>
 
 > Project is in its early stage of development.
 
@@ -31,7 +31,7 @@ This provides a cli natural-language interface for you to:
 + Manipulate files including photos, videos, PDFs, etc.
 
 At the moment, API keys for models are yet to be supported and by default, models are powered by HuggingFace Spaces and their respective hosts:
-+ LLM: [Llama3.1-70B-Instruct](https://huggingface.co/spaces/aixsatoshi/Meta-Llama-3.1-70B-Instruct-AWQ-INT4) hosted by [aixsatoshi](https://huggingface.co/aixsatoshi).
++ LLM: [Llama3.1-405B-Instruct](https://huggingface.co/spaces/Corvius/LLaMA-3.1-405B-Instruct) hosted by [Corvius](https://huggingface.co/Corvius).
 + Code: [CodeQwen1.5-7B](https://huggingface.co/spaces/Qwen/CodeQwen1.5-7b-Chat-demo) hosted by [Qwen](https://huggingface.co/Qwen).
 + Vision: [Qwen-VL-Max](https://huggingface.co/spaces/Qwen/Qwen-VL-Max) hosted by [Qwen](https://huggingface.co/Qwen).
 
