@@ -1,0 +1,18 @@
+[settings]
+name = "openmacro"
+version = "0.0.9"
+description = "Official default browser extension for Openmacro. "
+why = "Use this extension to have access to the web."
+authors = ["Amor Budiyanto <amor.budiyanto@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+
+[setup]
+instructions="docs/instructions.md"
+docs = "docs/docs.md"
+source = "https://github.com/Openmacro/browser.git"
+
+[dependencies]
+gradio_client = "^1.3.0" 
+toml = "^0.10"
+rich = "^14.0"
