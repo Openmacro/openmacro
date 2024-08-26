@@ -13,11 +13,13 @@
 
 <div align="center">
   <a href="https://pypi.org/project/openmacro/">
-    <img src="https://raw.githubusercontent.com/Openmacro/openmacro/main/docs/images/demo.png" width="480" height="auto" alt="Openmacro"/>
+    <img src="https://raw.githubusercontent.com/Openmacro/openmacro/main/docs/images/demo.png" height="auto" alt="Openmacro"/>
   </a>
 </div>
 
-> Note: Project is in its early stage of development.
+
+
+> Project is in its early stage of development.
 
 openmacro is a multimodal personal agent that allows LLMs to run code locally. openmacro aims to act as a personal agent capable of completing and automating simple to complex tasks autonomously via self prompting.
 
