@@ -4,9 +4,12 @@
   </a>
 </div>
 <div align="center">
-<a href="LICENSE"><img src="https://img.shields.io/static/v1?label=license&message=MIT&color=white&style=flat" alt="License"/></a>
-  <a href="LICENSE"><img src="https://img.shields.io/github/commit-activity/m/Openmacro/openmacro" alt="License"/></a>
-  <a href="LICENSE"><img src="https://img.shields.io/github/last-commit/Openmacro/openmacro" alt="License"/></a>
+<a href="https://github.com/Openmacro/openmacro/blob/main/LICENSE"><img src="https://img.shields.io/static/v1?label=license&message=MIT&color=white&style=flat" alt="License"/></a>
+  <a href="https://github.com/Openmacro/openmacro/graphs/commit-activity"><img src="https://img.shields.io/github/commit-activity/m/Openmacro/openmacro" alt="Commit Activity"/></a>
+  <a href="https://github.com/Openmacro/openmacro/commits/"><img src="https://img.shields.io/github/last-commit/Openmacro/openmacro" alt="Last Commit"/></a>
+  <a href="https://pypi.org/project/openmacro"><img src="https://img.shields.io/pypi/dm/openmacro" alt="Downloads"/></a>
+  <a href="https://github.com/Openmacro/openmacro/stargazers"><img src="https://img.shields.io/github/stars/Openmacro/openmacro" alt="Stars"/></a>
+
 </div>
 
 ##
