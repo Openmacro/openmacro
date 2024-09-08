@@ -30,16 +30,12 @@ This provides a cli natural-language interface for you to:
 + Control desktop applications through vision and pyautogui.
 + Manipulate files including photos, videos, PDFs, etc.
 
-At the moment, API keys for models are yet to be supported and by default, models are powered by HuggingFace Spaces and their respective hosts:
+At the moment, API keys for models are yet to be supported and by default, models are powered by SambaNova and HuggingFace Spaces and their respective hosts:
 + LLM: [Llama3.1-405B-Instruct](https://huggingface.co/spaces/Corvius/LLaMA-3.1-405B-Instruct) hosted by [Corvius](https://huggingface.co/Corvius).
 + Code: [CodeQwen1.5-7B](https://huggingface.co/spaces/Qwen/CodeQwen1.5-7b-Chat-demo) hosted by [Qwen](https://huggingface.co/Qwen).
 + Vision: [Qwen-VL-Max](https://huggingface.co/spaces/Qwen/Qwen-VL-Max) hosted by [Qwen](https://huggingface.co/Qwen).
 
 This project is heavily inspired by Open Interpreter. 
-
-### Demo
-
-
 
 ### Quick Start
 You can get started with openmacro by running.
@@ -75,9 +71,9 @@ personality="You have a kind, deterministic and professional attitude towards yo
 - [x] CLI Interface
 - [X] Extensions Feature
 - [X] Web Search Capability
+- [X] Async Chunk Streaming
 - [ ] Security & Error Handling
 - [ ] API Keys Support
-- [ ] Chunk Streaming and Smart Stalling 
 - [ ] Semantic File Search
 - [ ] App Interface
 
