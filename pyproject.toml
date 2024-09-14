@@ -22,6 +22,7 @@ asyncio="*"
 markdownify="*"
 beautifulsoup4="*"
 pybrowsers="*"
+chromadb="*"
 
 [tool.poetry.scripts]
 macro = "openmacro.__main__:main"
