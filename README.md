@@ -33,7 +33,7 @@ This provides a cli natural-language interface for you to:
 + Control desktop applications through vision and pyautogui.
 + Manipulate files including photos, videos, PDFs, etc.
 
-At the moment, API keys for models are yet to be supported and by default, models are powered by SambaNova and HuggingFace Spaces and their respective hosts:
+At the moment, API keys for models are yet to be supported and by default, models are powered by SambaNova with fallback powered by HuggingFace Spaces and their respective hosts:
 + LLM: [Llama3.1-405B-Instruct](https://huggingface.co/spaces/Corvius/LLaMA-3.1-405B-Instruct) hosted by [Corvius](https://huggingface.co/Corvius).
 + Code: [CodeQwen1.5-7B](https://huggingface.co/spaces/Qwen/CodeQwen1.5-7b-Chat-demo) hosted by [Qwen](https://huggingface.co/Qwen).
 + Vision: [Qwen-VL-Max](https://huggingface.co/spaces/Qwen/Qwen-VL-Max) hosted by [Qwen](https://huggingface.co/Qwen).
@@ -71,24 +71,26 @@ personality="You have a kind, deterministic and professional attitude towards yo
 
 ### Todo's 
 - [x] AI Intepreter
-- [x] CLI Interface
-- [X] Extensions Feature
 - [X] Web Search Capability
 - [X] Async Chunk Streaming
-- [ ] Security & Error Handling
+- [ ] Polished Extensions Feature
+- [ ] Cost Efficient Long Term Memory & Context Manager
 - [ ] API Keys Support
+- [ ] Security & Error Handling
 - [ ] Semantic File Search
 - [ ] App Interface
 
 ### Currently Working On
 Currently, focusing on a refined system for Extensions, so anyone can build extensions for openmacro.
 
-- Working on `browser` which is the official openmacro browser extension powered by Playwright, Bs4 and Markdownify. 
+- Working on `browser` which is the official openmacro browser extension powered by Playwright, Bs4 and Markdownify.
 
 - Working on `ompi` which is the Openmacro Package Index. Similar to Python's `pypi`, users can install third-party extensions to integrate with their openmacro assistant.
 
+- Cost efficient long term memory and conversational context managers through vector databases. Most likely powered by `Milvus` or `Milvus Lite`.
+
 ### Next Steps
-Focusing on error handling, security and safety as AI LLMs can be unpredictable and with the addition of Extensions, libraries might not be setup properly or cause issues for the user. 
+Better integration of extensions. 
 
 ### Contact
 You can contact me at [amor.budiyanto@gmail.com](mailto:amor.budiyanto@gmail.com)
