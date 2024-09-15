@@ -65,13 +65,13 @@ def to_markdown(html, ignore=[], ignore_ids=[], ignore_classes=[], strip=[]):
     return markdown
 
 class Browser:
-    def __init__(self, openmacro, headless=False):
+    def __init__(self, openmacro, headless=True):
         # Temp solution, loads widgets from ALL engines
         # Should only load widgets from chosen engine
         
         # points to current openmacro instance
         self.openmacro = openmacro
-        self.context = openmacro.context_memory.global_collection
+        #self.context = openmacro.context_memory.global_collection
 
         with open(Path(__file__).parent / "src" / "engines.json", "r") as f:
             self.engines = json.load(f)
@@ -193,14 +193,14 @@ class Browser:
         # acts like a cache and local search engine
         # for previous web searches
         # uses embeddings to view relevant searches
-        if to_context:
-            # temp, will improve
-            contents = contents.split("###")
-            self.context.add(
-                documents=contents,
-                metadatas=[{"source": "browser"} for _ in range(len(contents))], # filter on these!
-                ids=[f"doc{i}" for i in range(len(contents))], # unique for each doc
-            )
+        # if to_context:
+        #     # temp, will improve
+        #     contents = contents.split("###")
+        #     self.context.add(
+        #         documents=contents,
+        #         metadatas=[{"source": "browser"} for _ in range(len(contents))], # filter on these!
+        #         ids=[f"doc{i}" for i in range(len(contents))], # unique for each doc
+        #     )
             
         return contents
 
@@ -246,7 +246,7 @@ class Browser:
             results = await function(self, page)
         
         await page.close() 
-        return results
+        return results if results else "Error: It seems like your query does not show any widgets."
     
     def parallel(self, *funcs):
         return self.loop.run_until_complete(self.run_parallel(*funcs))
