@@ -30,27 +30,27 @@ This provides a cli natural-language interface for you to:
 
 + Complete and automate simple to complex tasks.
 + Analyse and plot data.
-+ Control desktop applications through vision and pyautogui.
++ Browse the web for the latest information.
 + Manipulate files including photos, videos, PDFs, etc.
 
-At the moment, API keys for models are yet to be supported and by default, models are powered by SambaNova with fallback powered by HuggingFace Spaces and their respective hosts:
-+ LLM: [Llama3.1-405B-Instruct](https://huggingface.co/spaces/Corvius/LLaMA-3.1-405B-Instruct) hosted by [Corvius](https://huggingface.co/Corvius).
-+ Code: [CodeQwen1.5-7B](https://huggingface.co/spaces/Qwen/CodeQwen1.5-7b-Chat-demo) hosted by [Qwen](https://huggingface.co/Qwen).
-+ Vision: [Qwen-VL-Max](https://huggingface.co/spaces/Qwen/Qwen-VL-Max) hosted by [Qwen](https://huggingface.co/Qwen).
+At the moment, openmacro only supports API keys for models powered by SambaNova. Why? Because it’s free, fast, and reliable, which makes it ideal for testing as the project grows! Support for other hosts such as OpenAI and Anthropic is planned to be added in future versions.
 
-This project is heavily inspired by Open Interpreter. 
+This project is heavily inspired by [`Open Interpreter`](https://github.com/OpenInterpreter/open-interpreter) ❤️
 
 ### Quick Start
-You can get started with openmacro by running.
+To get started with openmacro, get a free API key by creating an account at [https://cloud.sambanova.ai/](https://cloud.sambanova.ai/). 
+
+Next, install and start openmacro by running:
 ```shell
 pip install openmacro
-macro
+macro --api_key "YOUR_API_KEY"
 ```
 > Not working? Raise an issue [here](https://github.com/amooo-ooo/openmacro/issues/new) or try this out instead:
 ```shell
 py -m pip install openmacro
-py -m openmacro
+py -m openmacro --api_key "YOUR_API_KEY"
 ```
+> Note: You only need to pass `--api_key` once! Next time simply call `macro` or `py -m openmacro`.
 
 ### Personalisation
 Openmacro supports cli args and customised settings! You can view arg options by running:
@@ -73,12 +73,12 @@ personality="You have a kind, deterministic and professional attitude towards yo
 - [x] AI Intepreter
 - [X] Web Search Capability
 - [X] Async Chunk Streaming
-- [ ] Polished Extensions Feature
-- [ ] Cost Efficient Long Term Memory & Context Manager
-- [ ] API Keys Support
-- [ ] Security & Error Handling
+- [X] API Keys Support
+- [ ] `WIP` Cost Efficient Long Term Memory & Context Manager
+- [ ] `WIP` Extensions API (Openmacro Package Index)
 - [ ] Semantic File Search
-- [ ] App Interface
+- [ ] Optional Telemetry
+- [ ] Desktop, Android & IOS App Interface
 
 ### Currently Working On
 Currently, focusing on a refined system for Extensions, so anyone can build extensions for openmacro.
@@ -87,10 +87,7 @@ Currently, focusing on a refined system for Extensions, so anyone can build exte
 
 - Working on `ompi` which is the Openmacro Package Index. Similar to Python's `pypi`, users can install third-party extensions to integrate with their openmacro assistant.
 
-- Cost efficient long term memory and conversational context managers through vector databases. Most likely powered by `Milvus` or `Milvus Lite`.
-
-### Next Steps
-Better integration of extensions. 
+- Cost efficient long term memory and conversational context managers through vector databases. Most likely powered by [`ChromaDB`](https://github.com/chroma-core/chroma).
 
 ### Contact
 You can contact me at [amor.budiyanto@gmail.com](mailto:amor.budiyanto@gmail.com)
