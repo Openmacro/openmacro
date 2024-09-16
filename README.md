@@ -70,7 +70,7 @@ personality="You have a kind, deterministic and professional attitude towards yo
 ```
 
 ### Todo's 
-- [x] AI Intepreter
+- [x] AI Interpreter
 - [X] Web Search Capability
 - [X] Async Chunk Streaming
 - [X] API Keys Support
