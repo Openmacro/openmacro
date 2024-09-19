@@ -1,0 +1,16 @@
+[settings]
+name = "email"
+version = "0.0.1"
+description = "Official default email extension for Openmacro. "
+why = "Use this extension to send emails to recipients."
+authors = ["Amor Budiyanto <amor.budiyanto@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+
+[setup]
+init="__init__.py"
+instructions="docs/instructions.md"
+docs="docs/docs.md"
+source="https://github.com/Openmacro/browser.git"
+
+[dependencies]
