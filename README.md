@@ -52,21 +52,56 @@ py -m openmacro --api_key "YOUR_API_KEY"
 ```
 > Note: You only need to pass `--api_key` once! Next time simply call `macro` or `py -m openmacro`.
 
-### Personalisation
+### Profiles
 Openmacro supports cli args and customised settings! You can view arg options by running:
 ```shell
 macro --help
 ```
-To append your own personalised settings and save it for the future, run:
+To add your own personalised settings and save it for the future, run:
 ```shell
-macro --config "path\to\config.toml" --save
+macro --profile "path\to\profile.toml" --save
 ```
 
-What your personalised `config.toml` might look like:
+What your `profile.toml` might look like:
 ```toml
+[profile]
+name = "Amor"
+version = "1.0.0"
+
 [assistant]
-name="Basil"
-personality="You have a kind, deterministic and professional attitude towards your work and respond in a formal, yet casual manner."
+name = "Basil"
+personality = "You have a kind, deterministic and professional attitude towards your work and respond in a formal, yet casual manner."
+messages = []
+verbose = false
+
+[extensions.browser]
+headless = true
+engine = "google"
+
+[extensions.email]
+email="amor.budiyanto@gmail.com"
+password="password"
+
+[safeguards]
+timeout = 16
+auto_run = true
+auto_install = true
+```
+
+You can also switch between profiles by running:
+```shell
+macro --switch "amor"
+```
+
+Profiles also support versions for modularity (uses the latest version by default).
+```shell
+macro --switch "amor:1.0.0"
+```
+> Note: All profiles are isolated. LTM from different profiles and versions is not shared.
+
+To view all available profiles run:
+```shell
+macro --profiles
 ```
 
 ### Todo's 
@@ -74,6 +109,7 @@ personality="You have a kind, deterministic and professional attitude towards yo
 - [X] Web Search Capability
 - [X] Async Chunk Streaming
 - [X] API Keys Support
+- [ ] `WIP` Profiles Support
 - [ ] `WIP` Cost Efficient Long Term Memory & Context Manager
 - [ ] `WIP` Extensions API (Openmacro Package Index)
 - [ ] Semantic File Search
