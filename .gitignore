@@ -65,6 +65,9 @@ db.sqlite3-journal
 # ChromaDB stuff:
 chroma.sqlite3
 
+# Openmacro stuff:
+profiles/
+
 # Flask stuff:
 instance/
 .webassets-cache
