@@ -1,6 +1,4 @@
-from ..core.core import Openmacro, Profile
-from ..extensions.browser.utils.general import get_relevant
-
+from ..core import Openmacro
 from rich import print
 import asyncio
 import os

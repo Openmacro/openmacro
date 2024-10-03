@@ -1,4 +1,4 @@
-from .general import ROOT_DIR, lazy_import
+from .openmacro.core.utils.general import ROOT_DIR, lazy_import
 from pathlib import Path
 import toml
 import re
