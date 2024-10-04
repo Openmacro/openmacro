@@ -1,2 +1,4 @@
-status = extensions.oemail.send("amor.budiyanto", title, content) # Sends an email to recipient
+# EMAIL APP
+email = Email()
+status = email.send("amor.budiyanto", title, content) # Sends an email to recipient
 print(status) # {"state": "success"}

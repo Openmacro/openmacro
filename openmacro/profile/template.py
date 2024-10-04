@@ -1,6 +1,6 @@
-from . import Profile
-from ..extensions import Browser, Email
-from ..utils import USERNAME
+from openmacro.profile import Profile
+from openmacro.extensions import Browser, Email
+from openmacro.utils import USERNAME
 
 profile: Profile = Profile(
     user = { 
