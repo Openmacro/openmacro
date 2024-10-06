@@ -1,5 +1,4 @@
 from openmacro.profile import Profile
-from openmacro.extensions import Browser, Email
 from openmacro.utils import USERNAME
 
 profile: Profile = Profile(
@@ -23,10 +22,6 @@ profile: Profile = Profile(
         "prompts": "core/prompts",
         "extensions": "",
         "memories": f"profiles/{USERNAME}/1.0.0"
-    },
-    extensions = {
-        "Browser": Browser,
-        "Email": Email
     },
     config = {
         "telemetry": False,

@@ -67,16 +67,12 @@ What your `profile.py` might look like:
 ```python
 # imports
 from openmacro.profile import Profile
-from openmacro.extensions import Browser, Email
-from openmacro.utils import config
-
-# pass kwargs to extensions
-Email = config(Email, mail="amor.budiyanto@gmail.com", password="password")
+from openmacro.extensions import BrowserKwargs, EmailKwargs
 
 # profile setup
 profile: Profile = Profile(
     user = { 
-        "name": "Amor, 
+        "name": "Amor", 
         "version": "1.0.0"
     },
     assistant = {
@@ -95,15 +91,16 @@ profile: Profile = Profile(
         "prompts": "core/prompts",
     },
     extensions = {
-        "Browser": Browser,
-        "Email": Email
+    # type safe kwargs
+        "Browser": BrowserKwargs(headless=False, engine="google"),
+        "Email": EmailKwargs(email="amor.budiyanto@gmail.com", password="password")
     },
     config = {
         "verbose": False,
         "dev": False
     },
-    # you can specify custom paths to languages or add custom languages for openmacro to run!
     languages = {
+    # specify custom paths to languages or add custom languages for openmacro
       "python": ["C:\Windows\py.EXE", "-c"],
       "rust": ["cargo", "script", "-e"] # not supported by default, but can be added!
     }
@@ -149,7 +146,11 @@ openmacro supports custom RAG extensions for modularity and theoretically infini
 ### Writing Extensions
 Write extensions using the template:
 ```python
-class ExtensionName:
+from typing import TypedDict
+class ExtensionKwargs(TypedDict):
+    ...
+
+class Extensionname:
     def __init__(self):
         ...
       
@@ -159,6 +160,14 @@ class ExtensionName:
         
 ```
 You can find examples [here](https://github.com/Openmacro/openmacro/tree/main/openmacro/extensions).
+
+> Note, classname should not be camelcase, but titlecase instead.
+
+> Note, creating a type-safe kwargs typeddict is optional but recommended.
+If extesions does not contain a kwarg class, use:
+```python
+from openmacro.utils import Kwargs
+```
 
 Upload your code to `pypi` for public redistribution using `twine` and `poetry`.
 To add it to `openmacro.extensions` for profiles and `openmacro.apps` for the AI to use, run:
