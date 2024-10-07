@@ -96,7 +96,8 @@ profile: Profile = Profile(
         "Email": EmailKwargs(email="amor.budiyanto@gmail.com", password="password")
     },
     config = {
-        "verbose": False,
+        "verbose": True,
+        "conversational": True,
         "dev": False
     },
     languages = {
