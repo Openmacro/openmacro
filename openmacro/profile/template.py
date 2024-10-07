@@ -1,5 +1,6 @@
 from openmacro.profile import Profile
 from openmacro.utils import USERNAME
+from openmacro.extensions import BrowserKwargs
 
 profile: Profile = Profile(
     user = { 
@@ -29,5 +30,12 @@ profile: Profile = Profile(
         "local": False,
         "dev": False,
         "conversational": True,
+    },
+    extensions = {
+        "Browser": BrowserKwargs(engine="google")
+    },
+    tts = {
+        "enabled": True,
+        "engine": "SystemEngine"
     }
 )
