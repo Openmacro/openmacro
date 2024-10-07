@@ -104,6 +104,11 @@ profile: Profile = Profile(
     # specify custom paths to languages or add custom languages for openmacro
       "python": ["C:\Windows\py.EXE", "-c"],
       "rust": ["cargo", "script", "-e"] # not supported by default, but can be added!
+    },
+    tts = {
+    # powered by KoljaB/RealtimeSTT
+      "enabled": True,
+      "engine": "SystemEngine"
     }
 )
 ```
@@ -194,6 +199,7 @@ omi install .
 - [X] API Keys Support
 - [X] Profiles Support
 - [X] Extensions API
+- [ ] `WIP` TTS & STT
 - [ ] `WIP` Cost Efficient Long Term Memory & Context Manager
 - [ ] Semantic File Search
 - [ ] Optional Telemetry
