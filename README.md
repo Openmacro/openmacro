@@ -22,7 +22,7 @@
 
 <br>
 
-> Project is in its early stage of development.
+> Project is in its early stage of development. Optimisations & safety not guarenteed until first version release.
 
 openmacro is a multimodal personal agent that allows LLMs to run code locally. openmacro aims to act as a personal agent capable of completing and automating simple to complex tasks autonomously via self prompting.
 
