@@ -13,17 +13,9 @@
 
 ##
 
-<div align="center">
-  <a href="https://pypi.org/project/openmacro/">
-    <video controls>
-  <source src="https://amorb.pages.dev/demo.mp4" type="video/mp4">
-</video>
-  </a>
-</div>
+https://github.com/user-attachments/assets/9360dfeb-a471-49c3-bbdc-72b32cc8eaeb
 
-<br>
-
-> Project is in its early stage of development. Optimisations & safety not guarenteed until first version release.
+> Project is in its early stage of development. Optimisations & safety not guaranteed until first version release.
 
 openmacro is a multimodal personal agent that allows LLMs to run code locally. openmacro aims to act as a personal agent capable of completing and automating simple to complex tasks autonomously via self prompting.
 
