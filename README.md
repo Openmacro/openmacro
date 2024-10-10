@@ -1,6 +1,6 @@
 <div align="center">
   <a href="https://pypi.org/project/openmacro/">
-    <img src="https://raw.githubusercontent.com/openmacro/openmacro/46bb3481766cb66983cb191db731c41f5f69d18d/docs/videos/demo.mp4" width="480" height="auto" alt="openmacro"/>
+    <img src="https://raw.githubusercontent.com/openmacro/openmacro/46bb3481766cb66983cb191db731c41f5f69d18d/docs/images/openmacro-title.svg" width="480" height="auto" alt="openmacro"/>
   </a>
 </div>
 <div align="center">
