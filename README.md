@@ -9,14 +9,15 @@
   <a href="https://github.com/openmacro/openmacro/commits/"><img src="https://img.shields.io/github/last-commit/openmacro/openmacro" alt="Last Commit"/></a>
   <a href="https://pypi.org/project/openmacro"><img src="https://img.shields.io/pypi/dm/openmacro" alt="Downloads"/></a>
   <a href="https://github.com/openmacro/openmacro/stargazers"><img src="https://img.shields.io/github/stars/openmacro/openmacro" alt="Stars"/></a>
-
 </div>
 
 ##
 
 <div align="center">
   <a href="https://pypi.org/project/openmacro/">
-    <img src="https://raw.githubusercontent.com/openmacro/openmacro/main/docs/images/demo.png" height="auto" alt="openmacro"/>
+    <video controls>
+  <source src="https://amorb.pages.dev/demo.mp4" type="video/mp4">
+</video>
   </a>
 </div>
 
