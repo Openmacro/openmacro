@@ -54,13 +54,10 @@ To add your own personalised settings and save it for the future, run:
 ```shell
 macro --profile "path\to\profile" --save
 ```
-Openmacro supports custom profiles in `JSON`, `TOML`, `YAML` and `Python`. 
-
-<hr>
+Openmacro supports custom profiles in `JSON`, `TOML`, `YAML` and `Python`:
 
 <details open>
 <summary>Python</summary>
-
 Profiles in `python` allow direct customisation and type safety!
 
 What your `profile.py` might look like:
@@ -133,8 +130,6 @@ asyncio.run(main)
 
 </details>
 
-<hr>
-
 <details>
 <summary>JSON</summary>
 
@@ -188,8 +183,6 @@ What your `profile.json` might look like:
 ```
 </details>
 
-<hr>
-
 <details>
 <summary>TOML</summary>
 
@@ -240,8 +233,6 @@ enabled = true
 engine = "SystemEngine"
 ```
 </details>
-
-<hr>
 
 <details>
 <summary>YAML</summary>
@@ -295,9 +286,6 @@ tts:
   engine: "SystemEngine"
 ```
 </details>
-
-<hr>
-<br>
 
 You can also switch between profiles by running:
 ```shell
