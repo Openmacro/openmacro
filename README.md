@@ -52,9 +52,16 @@ macro --help
 ```
 To add your own personalised settings and save it for the future, run:
 ```shell
-macro --profile "path\to\profile.py" --save
+macro --profile "path\to\profile" --save
 ```
-Profiles are `python` files to allow dynamic integration and type safety (with TypedDict)! Better docs for Profiles will be added in upcoming versions.
+Openmacro supports custom profiles in `JSON`, `TOML`, `YAML` and `Python`. 
+
+<hr>
+
+<details open>
+<summary>Python</summary>
+
+Profiles in `python` allow direct customisation and type safety!
 
 What your `profile.py` might look like:
 ```python
@@ -100,13 +107,14 @@ profile: Profile = Profile(
     },
     tts = {
     # powered by KoljaB/RealtimeSTT
+    # options ["SystemEngine", "GTTSEngine", "OpenAIEngine"]
       "enabled": True,
-      "engine": "SystemEngine"
+      "engine": "OpenAIEngine",
+      "api_key": "sk-example"
     }
 )
 ```
-
-If you want to build your own app with openmacro, you can simply extend your profile to use it:
+And can be extended if you want to build your own app with openmacro:
 ```python
 ...
 
@@ -122,6 +130,174 @@ async def main():
 import asyncio
 asyncio.run(main)
 ```
+
+</details>
+
+<hr>
+
+<details>
+<summary>JSON</summary>
+
+What your `profile.json` might look like:
+```json
+{
+    "user": {
+        "name": "Amor",
+        "version": "1.0.0"
+    },
+    "assistant": {
+        "name": "Basil",
+        "personality": "You have a kind, deterministic and professional attitude towards your work and respond in a formal, yet casual manner.",
+        "messages": [],
+        "breakers": ["the task is done.", "the conversation is done."]
+    },
+    "safeguards": {
+        "timeout": 16,
+        "auto_run": true,
+        "auto_install": true
+    },
+    "paths": {
+        "prompts": "core/prompts"
+    },
+    "extensions": {
+        "Browser": {
+            "headless": false,
+            "engine": "google"
+        },
+        "Email": {
+            "email": "amor.budiyanto@gmail.com",
+            "password": "password"
+        }
+    },
+    "config": {
+        "verbose": true,
+        "conversational": true,
+        "dev": false
+    },
+    "languages": {
+        "python": ["C:\\Windows\\py.EXE", "-c"],
+        "rust": ["cargo", "script", "-e"]
+    },
+    "tts": {
+        "enabled": true,
+        "engine": "OpenAIEngine",
+        "api_key": "sk-example"
+        
+    }
+}
+```
+</details>
+
+<hr>
+
+<details>
+<summary>TOML</summary>
+
+What your `profile.toml` might look like:
+```toml
+[user]
+name = "Amor"
+version = "1.0.0"
+
+[assistant]
+name = "Basil"
+personality = "You have a kind, deterministic and professional attitude towards your work and respond in a formal, yet casual manner."
+messages = []
+breakers = ["the task is done.", "the conversation is done."]
+
+[safeguards]
+timeout = 16
+auto_run = true
+auto_install = true
+
+[paths]
+prompts = "core/prompts"
+
+[extensions.Browser]
+headless = false
+engine = "google"
+
+[extensions.Email]
+email = "amor.budiyanto@gmail.com"
+password = "password"
+
+[config]
+verbose = true
+conversational = true
+dev = false
+
+[languages.python]
+0 = "C:\\Windows\\py.EXE"
+1 = "-c"
+
+[languages.rust]
+0 = "cargo"
+1 = "script"
+2 = "-e"
+
+[tts]
+enabled = true
+engine = "SystemEngine"
+```
+</details>
+
+<hr>
+
+<details>
+<summary>YAML</summary>
+
+What your `profile.yaml` might look like:
+```yaml
+user:
+  name: "Amor"
+  version: "1.0.0"
+
+assistant:
+  name: "Basil"
+  personality: "You have a kind, deterministic and professional attitude towards your work and respond in a formal, yet casual manner."
+  messages: []
+  breakers:
+    - "the task is done."
+    - "the conversation is done."
+
+safeguards:
+  timeout: 16
+  auto_run: true
+  auto_install: true
+
+paths:
+  prompts: "core/prompts"
+
+extensions:
+  Browser:
+    headless: false
+    engine: "google"
+  Email:
+    email: "amor.budiyanto@gmail.com"
+    password: "password"
+
+config:
+  verbose: true
+  conversational: true
+  dev: false
+
+languages:
+  python: 
+    - "C:\\Windows\\py.EXE"
+    - "-c"
+  rust: 
+    - "cargo"
+    - "script"
+    - "-e"
+
+tts:
+  enabled: true
+  engine: "SystemEngine"
+```
+</details>
+
+<hr>
+<br>
 
 You can also switch between profiles by running:
 ```shell
