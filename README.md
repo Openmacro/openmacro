@@ -15,7 +15,8 @@
 
 https://github.com/user-attachments/assets/9360dfeb-a471-49c3-bbdc-72b32cc8eaeb
 
-> Project is in its early stage of development. Optimisations & safety not guaranteed until first version release.
+> [!WARNING]
+> DISCLAIMER: Project is in its early stage of development. Current version is not stable.
 
 openmacro is a multimodal personal agent that allows LLMs to run code locally. openmacro aims to act as a personal agent capable of completing and automating simple to complex tasks autonomously via self prompting.
 
@@ -38,12 +39,14 @@ Next, install and start openmacro by running:
 pip install openmacro
 macro --api_key "YOUR_API_KEY"
 ```
+> [!TIP]
 > Not working? Raise an issue [here](https://github.com/amooo-ooo/openmacro/issues/new) or try this out instead:
 ```shell
 py -m pip install openmacro
 py -m openmacro --api_key "YOUR_API_KEY"
 ```
-> Note: You only need to pass `--api_key` once! Next time simply call `macro` or `py -m openmacro`.
+> [!NOTE]
+> You only need to pass `--api_key` once! Next time simply call `macro` or `py -m openmacro`.
 
 ## Profiles
 openmacro supports cli args and customised settings! You can view arg options by running:
@@ -73,8 +76,8 @@ profile: Profile = Profile(
         "version": "1.0.0"
     },
     assistant = {
-        "name": "Basil",
-        "personality": "You have a kind, deterministic and professional attitude towards your work and respond in a formal, yet casual manner.",
+        "name": "Macro",
+        "personality": "You respond in a professional attitude and respond in a formal, yet casual manner.",
         "messages": [],
         "breakers": ["the task is done.", 
                      "the conversation is done."]
@@ -83,9 +86,6 @@ profile: Profile = Profile(
         "timeout": 16, 
         "auto_run": True, 
         "auto_install": True 
-    },
-    paths = { 
-        "prompts": "core/prompts",
     },
     extensions = {
     # type safe kwargs
@@ -151,9 +151,6 @@ What your `profile.json` might look like:
         "auto_run": true,
         "auto_install": true
     },
-    "paths": {
-        "prompts": "core/prompts"
-    },
     "extensions": {
         "Browser": {
             "headless": false,
@@ -203,9 +200,6 @@ timeout = 16
 auto_run = true
 auto_install = true
 
-[paths]
-prompts = "core/prompts"
-
 [extensions.Browser]
 headless = false
 engine = "google"
@@ -219,14 +213,9 @@ verbose = true
 conversational = true
 dev = false
 
-[languages.python]
-0 = "C:\\Windows\\py.EXE"
-1 = "-c"
-
-[languages.rust]
-0 = "cargo"
-1 = "script"
-2 = "-e"
+[languages]
+python = ["C:\\Windows\\py.EXE", "-c"]
+rust = ["cargo", "script", "-e"]
 
 [tts]
 enabled = true
@@ -256,9 +245,6 @@ safeguards:
   auto_run: true
   auto_install: true
 
-paths:
-  prompts: "core/prompts"
-
 extensions:
   Browser:
     headless: false
@@ -273,13 +259,8 @@ config:
   dev: false
 
 languages:
-  python: 
-    - "C:\\Windows\\py.EXE"
-    - "-c"
-  rust: 
-    - "cargo"
-    - "script"
-    - "-e"
+  python: ["C:\\Windows\\py.EXE", "-c"]
+  rust: ["cargo", "script", "-e"]
 
 tts:
   enabled: true
@@ -296,7 +277,8 @@ Profiles also support versions for modularity (uses the latest version by defaul
 ```shell
 macro --switch "amor:1.0.0"
 ```
-> Note: All profiles are isolated. LTM from different profiles and versions are not shared.
+> [!NOTE]
+> All profiles are isolated. LTM from different profiles and versions are not shared.
 
 To view all available profiles run:
 ```shell
@@ -304,7 +286,7 @@ macro --profiles
 ```
 
 ## Extensions
-openmacro supports custom RAG extensions for modularity and theoretically infinite capabilities! By default, the `browser` and `email` extensions are installed.
+openmacro supports custom RAG extensions for modularity and better capabilities! By default, the `browser` and `email` extensions are installed.
 
 ### Writing Extensions
 Write extensions using the template:
@@ -324,16 +306,19 @@ class Extensionname:
 ```
 You can find examples [here](https://github.com/Openmacro/openmacro/tree/main/openmacro/extensions).
 
-> Note, classname should not be camelcase, but titlecase instead.
+> [!TIP]
+> classname should not be camelcase, but titlecase instead.
 
-> Note, creating a type-safe kwargs typeddict is optional but recommended.
+> [!NOTE]
+> creating a type-safe kwargs typeddict is optional but recommended.
+
 If extesions does not contain a kwarg class, use:
 ```python
 from openmacro.utils import Kwargs
 ```
 
 Upload your code to `pypi` for public redistribution using `twine` and `poetry`.
-To add it to `openmacro.extensions` for profiles and `openmacro.apps` for the AI to use, run:
+To add it to `openmacro.extensions` for profiles for the AI to use, run:
 
 ```shell
 omi install <module_name>
@@ -363,15 +348,15 @@ omi install .
 - [ ] Desktop, Android & IOS App Interface
 
 ## Currently Working On
+- Optimisations
 - Cost efficient long term memory and conversational context managers through vector databases. Most likely powered by [`ChromaDB`](https://github.com/chroma-core/chroma).
-
 - Hooks API and Live Code Output Streaming
-
-## Contact
-You can contact me at [amor.budiyanto@gmail.com](mailto:amor.budiyanto@gmail.com)
 
 ## Contributions
 This is my first major open-source project, so things might go wrong, and there is always room for improvement. You can contribute by raising issues, helping with documentation, adding comments, suggesting features or ideas, etc. Your help is greatly appreciated!
 
 ## Support
 You can support this project by writing custom extensions for openmacro! openmacro aims to be community-powered, as its limitations are based on its capabilities. More extensions mean better chances of completing complex tasks. I will create an official verified list of openmacro extensions sometime in the future!
+
+## Contact
+You can contact me at [amor.budiyanto@gmail.com](mailto:amor.budiyanto@gmail.com).
