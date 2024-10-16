@@ -48,6 +48,12 @@ py -m openmacro --api_key "YOUR_API_KEY"
 > [!NOTE]
 > You only need to pass `--api_key` once! Next time simply call `macro` or `py -m openmacro`.
 
+> [!TIP]
+> You can also assign different api-keys to different profiles!
+```shell
+py -m openmacro --api_key "YOUR_API_KEY" --profile "path\to\profile"
+```
+
 ## Profiles
 openmacro supports cli args and customised settings! You can view arg options by running:
 ```shell
@@ -55,7 +61,7 @@ macro --help
 ```
 To add your own personalised settings and save it for the future, run:
 ```shell
-macro --profile "path\to\profile" --save
+macro --profile "path\to\profile"
 ```
 Openmacro supports custom profiles in `JSON`, `TOML`, `YAML` and `Python`:
 
@@ -280,9 +286,20 @@ macro --switch "amor:1.0.0"
 > [!NOTE]
 > All profiles are isolated. LTM from different profiles and versions are not shared.
 
+You can also quick update a profile. `[BETA]`
+```shell
+macro --update "amor"
+```
+Quick updating allows you to easily update and make changes to your profile. Simply make changes to the original profile file, then call above.
+
 To view all available profiles run:
 ```shell
 macro --profiles
+```
+
+To view all available versions of a profile run:
+```shell
+macro --versions <profile_name>
 ```
 
 ## Extensions
